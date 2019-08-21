@@ -2359,8 +2359,9 @@ class MaskRCNN():
         if os.name is 'nt':
             workers = 0
         else:
-            workers = multiprocessing.cpu_count()
-
+	# Marcus für DATAHUB	
+        #    workers = multiprocessing.cpu_count()
+            workers = 0
         self.keras_model.fit_generator(
             train_generator,
             initial_epoch=self.epoch,
